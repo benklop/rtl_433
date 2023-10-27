@@ -771,6 +771,10 @@ def rtl_433_device_info(data, topic_prefix):
         last_match_end = match.end()
 
     path = ''.join(list(filter(lambda item: item, path_elements)))
+    if not id_elements:
+        id_elements.append(data['model'])
+        id_elements.append(data['id']) 
+
     id = '-'.join(id_elements)
     return (f"{topic_prefix}/{path}", id)
 
