@@ -674,6 +674,17 @@ mappings = {
         }
     },
 
+    "moisture": {
+        "device_type": "binary_sensor",
+        "object_suffix": "wet",
+        "config": {
+            "name": "Water Detected",
+            "device_class": "moisture",
+            "payload_on": "1",
+            "payload_off": "0",
+        }
+    },
+    
 }
 
 # Use secret_knock to trigger device automations for Honeywell ActivLink
